@@ -114,7 +114,7 @@ public final class DoubleXorCompressor {
                     // put 1 bit: 1
                     _data.add(1, 1);
                     //put 6 bits: number of leading zeros
-                    // TODO: 5 bits descried in paper
+                    // TODO: Why 5 bits descried in paper. There are 64(2^6) leading zeros at most.
                     _data.add(vl, 6);
                     //put 6 bits: length of XOR'd value
                     _data.add(Long.SIZE - vl - vt, 6);
